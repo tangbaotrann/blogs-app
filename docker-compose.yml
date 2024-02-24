@@ -2,8 +2,8 @@ version: "3.9"
 
 services:
   nextapp:
-    container_name: nextapp
-    image: nextjsdocker
+    container_name: blogsnextapp
+    image: blogsnextapp
     build: .
     ports:
       - "3000:3000"
