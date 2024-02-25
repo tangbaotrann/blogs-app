@@ -1,0 +1,32 @@
+.small {
+  padding: 4px;
+}
+
+.medium {
+  padding: 6px;
+}
+
+.large {
+  padding: 10px;
+}
+
+.outline {
+  outline: none;
+}
+
+.border {
+  border: none;
+}
+
+.borderRadius {
+  border-radius: 6px;
+}
+
+.primary {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.primary:focus {
+  border: 1px solid var(--primary);
+}

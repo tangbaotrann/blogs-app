@@ -1,0 +1,36 @@
+.default {
+  cursor: pointer;
+}
+
+.small {
+  padding: 4px;
+}
+
+.medium {
+  padding: 6px;
+}
+
+.large {
+  padding: 10px;
+}
+
+.outline {
+  outline: none;
+}
+
+.border {
+  border: none;
+}
+
+.borderRadius {
+  border-radius: 6px;
+}
+
+.primary {
+  color: var(--text-primary);
+  background-color: var(--primary);
+}
+
+.primary:hover {
+  background-color: var(--primary-hover);
+}
