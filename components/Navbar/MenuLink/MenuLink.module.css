@@ -1,8 +1,9 @@
 .container {
   padding: 10px;
+  font-weight: 500;
 }
 
 .active {
-  background-color: red;
+  background-color: var(--primary);
   border-radius: 20px;
 }

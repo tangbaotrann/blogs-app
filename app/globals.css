@@ -69,3 +69,39 @@ a {
   justify-content: center;
   margin: 40px 0;
 }
+
+@media screen and (max-width: 1450px) {
+  .wrapper {
+    width: 1366px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .wrapper {
+    width: 1280px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    width: 1024px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 768px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 640px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    width: 475px;
+  }
+}

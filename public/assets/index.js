@@ -14,6 +14,14 @@ export const icons = {
     src: "/assets/icons/loading.png",
     alt: "loading-page",
   },
+  menuMobile: {
+    src: "/assets/icons/burger-bar.png",
+    alt: "menu-mobile",
+  },
+  logout: {
+    src: "/assets/icons/logout.png",
+    alt: "logout",
+  },
 };
 
 export default images;
