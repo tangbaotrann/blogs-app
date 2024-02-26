@@ -1,7 +1,13 @@
 :root {
+  /* define width screen */
+  --screen-width: 1450px;
+
+  /* define color */
   --primary: #1f8ee9;
   --primary-hover: #067ada;
+  --danger: #dc3545;
   --text-primary: #ffffff;
+  --bg: #0d0c22;
 }
 
 * {
@@ -11,9 +17,55 @@
 }
 
 body {
+  background-color: var(--bg);
+  color: var(--text-primary);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Custom screen page */
+.wrapper {
+  width: var(--screen-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Page not found */
+.page__not_found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.back__home_icon {
+  display: flex;
+  align-items: center;
+}
+
+.back__home_icon:hover {
+  opacity: 0.8;
+}
+
+.back__home_text {
+  margin-bottom: 10px;
+}
+
+.back__home_text:hover {
+  color: var(--primary-hover);
+}
+
+/* Loading page */
+.loading__page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
 }

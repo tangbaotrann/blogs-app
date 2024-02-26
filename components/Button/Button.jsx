@@ -13,6 +13,7 @@ function Button({
   border = false,
   borderRadius = false,
   primary = false,
+  danger = false,
 }) {
   const Component = "button";
   const _small = small && styles.small;
@@ -22,13 +23,14 @@ function Button({
   const _border = !border && styles.border;
   const _borderRadius = borderRadius && styles.borderRadius;
   const _primary = primary && styles.primary;
+  const _danger = danger && styles.danger;
 
   return (
     <Component
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${className} ${styles.default} ${_small} ${_medium} ${_large} ${_outline} ${_border} ${_borderRadius} ${_primary}`}
+      className={`${className} ${styles.default} ${_small} ${_medium} ${_large} ${_outline} ${_border} ${_borderRadius} ${_primary} ${_danger}`}
     >
       {children}
     </Component>

@@ -34,3 +34,12 @@
 .primary:hover {
   background-color: var(--primary-hover);
 }
+
+.danger {
+  color: var(--text-primary);
+  background-color: var(--danger);
+}
+
+.danger:hover {
+  background-color: var(--primary-hover);
+}
