@@ -3,6 +3,22 @@ const images = {
     src: "/assets/images/logoo.png",
     alt: "logo-page",
   },
+  noAvatar: {
+    src: "/assets/images/no-avatar.png",
+    alt: "no-avatar",
+  },
+  about: {
+    src: "/assets/images/about.png",
+    alt: "about-page",
+  },
+  brands: {
+    src: "/assets/images/brands.png",
+    alt: "brands-page",
+  },
+  contact: {
+    src: "/assets/images/contact.png",
+    alt: "contact-page",
+  },
 };
 
 export const icons = {
@@ -21,6 +37,13 @@ export const icons = {
   logout: {
     src: "/assets/icons/logout.png",
     alt: "logout",
+  },
+};
+
+export const imagesGif = {
+  hero: {
+    src: "/assets/images/hero.gif",
+    alt: "hero-page",
   },
 };
 

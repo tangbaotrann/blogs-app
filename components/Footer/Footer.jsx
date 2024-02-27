@@ -4,8 +4,8 @@ function Footer() {
   return (
     <div className={styles.container}>
       <div className={styles.main}>
-        <span>@_tbtcodeofficial</span>
-        <span>@No copy.</span>
+        <span className={styles.name}>@_tbtcodeofficial</span>
+        <i className={styles.reserved}>baotrann © All rights reserved.</i>
       </div>
     </div>
   );

@@ -24,9 +24,12 @@
 
 .primary {
   width: 100%;
-  border: 1px solid #ccc;
+  border: 2px solid var(--bg);
+  color: var(--text-primary);
+  background-color: var(--bg-soft);
 }
 
 .primary:focus {
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 4px 2px var(--primary-hover);
 }

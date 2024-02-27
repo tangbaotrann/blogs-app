@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.image {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.section__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form input[type="text"] {
+  margin-bottom: 12px;
+}
+
+.btn {
+  margin-top: 12px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+}

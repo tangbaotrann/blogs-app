@@ -7,3 +7,13 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.reserved {
+  font-size: 14px;
+  font-weight: 600;
+}
