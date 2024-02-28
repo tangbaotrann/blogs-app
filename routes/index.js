@@ -17,6 +17,10 @@ const routes = [
     path: paths.BLOG_PAGE.url,
     name: paths.BLOG_PAGE.name,
   },
+  // {
+  //   path: paths.ADMIN_PAGE.url,
+  //   name: paths.ADMIN_PAGE.name,
+  // },
 ];
 
 export default routes;

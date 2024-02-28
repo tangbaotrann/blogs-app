@@ -15,6 +15,7 @@
   position: relative;
   width: 400px;
   height: 400px;
+  z-index: -1;
 }
 
 .section__right {
@@ -34,10 +35,23 @@
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    margin-top: 24px;
+  }
+
   .image {
     position: relative;
     width: 250px;
     height: 250px;
     object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    z-index: -1;
   }
 }

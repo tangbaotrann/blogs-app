@@ -17,7 +17,7 @@ function ContactPage() {
       </div>
 
       <div className={styles.section__right}>
-        <Form title="RegisterForm" action="" className={styles.form}>
+        <Form title="Information contact" action="" className={styles.form}>
           <Input
             type="text"
             name="username"

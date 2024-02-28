@@ -44,12 +44,14 @@
   position: relative;
   width: 400px;
   height: 400px;
+  z-index: -1;
 }
 
 @media screen and (max-width: 768px) {
   .container {
     display: flex;
     flex-direction: column;
+    margin-top: 24px;
   }
 
   .section__left {

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ImageNext from "next/image";
 
 import styles from "./Navbar.module.css";
@@ -13,18 +13,34 @@ import Button from "../Button/Button";
 import routes from "@/routes";
 import paths from "@/routes/paths";
 import Logout from "./Logout/Logout";
+import Search from "../Search/Search";
 
 function Navbar() {
   const pathName = usePathname();
 
   const [navbarMobile, setNavbarMobile] = useState(false);
+  const [scroll, setScroll] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+
+    setScroll(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [scroll]);
 
   // Testing... login page
   const session = true;
-  const isAdmin = false;
+  const isAdmin = true;
 
   return (
-    <div className={styles.container}>
+    <div
+      className={`${scroll >= 20 ? styles.containerScroll : styles.container}`}
+    >
       <Link href="/">
         <Image
           src={images.logo.src}
@@ -32,6 +48,13 @@ function Navbar() {
           className={styles.logo}
         />
       </Link>
+
+      {/* Search blog only */}
+      {pathName === paths.BLOG_PAGE.url && (
+        <div className={styles.search}>
+          <Search placeholder="Search title blog here..." />
+        </div>
+      )}
 
       <ul className={styles.menus}>
         {routes.map((item) => (
@@ -42,14 +65,17 @@ function Navbar() {
 
         {session ? (
           <>
-            {isAdmin && (
-              <MenuLink
-                item={{
-                  path: paths.ADMIN_PAGE.url,
-                  name: paths.ADMIN_PAGE.name,
-                }}
-              />
-            )}
+            <div className={styles.admin}>
+              {isAdmin && (
+                <MenuLink
+                  item={{
+                    path: paths.ADMIN_PAGE.url,
+                    name: paths.ADMIN_PAGE.name,
+                  }}
+                  pathName={pathName}
+                />
+              )}
+            </div>
             <Button danger large borderRadius className={styles.btn__logout}>
               <Logout />
             </Button>
@@ -89,6 +115,7 @@ function Navbar() {
                       path: paths.ADMIN_PAGE.url,
                       name: paths.ADMIN_PAGE.name,
                     }}
+                    pathName={pathName}
                   />
                 )}
                 <Button

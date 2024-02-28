@@ -4,7 +4,7 @@ const images = {
     alt: "logo-page",
   },
   noAvatar: {
-    src: "/assets/images/no-avatar.png",
+    src: "/assets/images/noavatar.png",
     alt: "no-avatar",
   },
   about: {
@@ -30,6 +30,10 @@ export const icons = {
     src: "/assets/icons/loading.png",
     alt: "loading-page",
   },
+  search: {
+    src: "/assets/icons/loupe.png",
+    alt: "search",
+  },
   menuMobile: {
     src: "/assets/icons/burger-bar.png",
     alt: "menu-mobile",
@@ -37,6 +41,10 @@ export const icons = {
   logout: {
     src: "/assets/icons/logout.png",
     alt: "logout",
+  },
+  back: {
+    src: "/assets/icons/back.png",
+    alt: "back",
   },
 };
 

@@ -1,0 +1,15 @@
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search__icon {
+  position: absolute;
+  top: 7px;
+  right: 6px;
+}
+
+.search__inp {
+  padding-right: 34px;
+}

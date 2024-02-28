@@ -3,11 +3,40 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px;
-  position: relative;
+  position: sticky;
+  top: 0;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   border-bottom: 1px solid var(--bg-soft);
   box-shadow: 0 0 4px 3px var(--bg-soft);
+  z-index: 9999;
+}
+
+.containerScroll {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom: 1px solid var(--primary);
+  box-shadow: 0 0 4px 3px var(--primary-hover);
+  background-color: var(--primary);
+  animation: change__background_navbar 1s linear alternate;
+  transition: all 0.1s linear;
+  z-index: 9999;
+}
+
+@keyframes change__background_navbar {
+  0% {
+    background-color: var(--navbar);
+  }
+
+  100% {
+    background-color: var(--primary);
+  }
 }
 
 .logo {
@@ -50,6 +79,56 @@
   gap: 6px;
 }
 
+@media screen and (max-width: 1024px) {
+  .search {
+    display: none;
+  }
+
+  .menus li,
+  .menus .btn__logout {
+    display: none;
+  }
+
+  .menu__mobile {
+    display: block;
+  }
+
+  .navbar__menu_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 50%;
+    height: calc(100vh - 100px);
+    position: absolute;
+    right: 18px;
+    top: 58px;
+    border-radius: 12px 0 12px 12px;
+    box-shadow: 0px 0px 24px 4px var(--primary-hover);
+    background-color: var(--primary-hover);
+    z-index: 9999;
+  }
+
+  .navbar__menu_mobile li,
+  .navbar__menu_mobile .btn__logout {
+    display: block;
+  }
+
+  .navbar__menu_mobile .btn__logout {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__menu_mobile .btn__logout:hover {
+    background-color: var(--primary);
+  }
+
+  .admin {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .menus li,
   .menus .btn__logout {
@@ -74,7 +153,7 @@
     border-radius: 12px 0 12px 12px;
     box-shadow: 0px 0px 24px 4px var(--primary-hover);
     background-color: var(--primary-hover);
-    z-index: 99;
+    z-index: 9999;
   }
 
   .navbar__menu_mobile li,
@@ -89,5 +168,9 @@
 
   .navbar__menu_mobile .btn__logout:hover {
     background-color: var(--primary);
+  }
+
+  .admin {
+    display: none;
   }
 }
