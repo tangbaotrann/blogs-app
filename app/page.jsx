@@ -1,8 +1,10 @@
+import Link from "next/link";
 import ImageNext from "next/image";
 
 import styles from "./home.module.css";
 import Button from "@/components/Button/Button";
 import images, { imagesGif } from "@/public/assets";
+import paths from "@/routes/paths";
 
 function HomePage() {
   return (
@@ -17,12 +19,16 @@ function HomePage() {
         </span>
 
         <div className={styles.buttons}>
-          <Button primary large borderRadius>
-            Learn more
-          </Button>
-          <Button danger large borderRadius>
-            Contact
-          </Button>
+          <Link href={paths.BLOG_PAGE.url}>
+            <Button primary large borderRadius>
+              Blog
+            </Button>
+          </Link>
+          <Link href={paths.CONTACT_PAGE.url}>
+            <Button danger large borderRadius>
+              Contact
+            </Button>
+          </Link>
         </div>
 
         <div className={styles.brands}>

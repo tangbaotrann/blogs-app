@@ -10,8 +10,8 @@ function Search({ placeholder, scroll }) {
       <ImageNext
         src={icons.search.src}
         alt={icons.search.alt}
-        width={22}
-        height={22}
+        width={18}
+        height={18}
         className={styles.search__icon}
       />
       <Input

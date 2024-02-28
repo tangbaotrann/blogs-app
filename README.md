@@ -6,4 +6,6 @@
 
 ## Preview:
 
-- Will updating soon.
+- Updated version v-0.1: ...
+
+- Will upgrading soon. Thanks!

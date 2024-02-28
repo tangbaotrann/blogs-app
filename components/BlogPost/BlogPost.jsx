@@ -13,7 +13,12 @@ function BlogPost() {
 
       <div className={styles.texts}>
         <span className={styles.title}>Title</span>
-        <span className={styles.desc}>Desc</span>
+        <span className={styles.desc}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+          ipsum recusandae, amet pariatur quis enim excepturi fugit et quos
+          rerum illo vitae cupiditate aliquam blanditiis aut hic porro
+          exercitationem rem.
+        </span>
 
         <div className={styles.footer}>
           <Link href="/blog/anyid" className={styles.read__more}>
