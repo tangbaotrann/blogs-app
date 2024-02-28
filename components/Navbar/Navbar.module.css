@@ -18,7 +18,7 @@
   justify-content: space-between;
   padding: 12px;
   position: sticky;
-  top: 0;
+  top: 1px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   border-bottom: 1px solid var(--primary);
@@ -67,9 +67,14 @@
   box-shadow: 0px 0px 24px 4px var(--primary);
   background-color: var(--primary);
   z-index: 9999;
+  position: relative;
 }
 
 .menu__mobile {
+  display: none;
+}
+
+.search__mobile {
   display: none;
 }
 
@@ -77,6 +82,25 @@
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.icon__exit {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  cursor: pointer;
+}
+
+.menu__mobile {
+  cursor: pointer;
+}
+
+.menu__mobile:hover {
+  opacity: 0.8;
+}
+
+.icon__exit:hover {
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 1024px) {
@@ -127,6 +151,14 @@
   .admin {
     display: none;
   }
+
+  .search__mobile {
+    display: block;
+  }
+
+  .search___mobile__in_menu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -172,5 +204,24 @@
 
   .admin {
     display: none;
+  }
+
+  .search__mobile {
+    display: block;
+  }
+
+  .search___mobile__in_menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .search__mobile {
+    display: none;
+  }
+
+  .search___mobile__in_menu {
+    padding: 0 10px;
+    display: block;
   }
 }

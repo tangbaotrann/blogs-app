@@ -13,3 +13,14 @@
 .search__inp {
   padding-right: 34px;
 }
+
+.search__inp_bg {
+  color: var(--bg-soft);
+  padding-right: 34px;
+  border: 1px solid var(--text-primary);
+  background-color: var(--text-primary);
+}
+
+.search__inp_bg:focus {
+  border: 1px solid var(--text-primary);
+}

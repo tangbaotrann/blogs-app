@@ -52,7 +52,7 @@ function Navbar() {
       {/* Search blog only */}
       {pathName === paths.BLOG_PAGE.url && (
         <div className={styles.search}>
-          <Search placeholder="Search title blog here..." />
+          <Search scroll={scroll} placeholder="Search title blog here..." />
         </div>
       )}
 
@@ -88,11 +88,17 @@ function Navbar() {
           </MenuLink>
         )}
 
+        {/* Search blog only with navbar mobile */}
+        {pathName === paths.BLOG_PAGE.url && (
+          <div className={styles.search__mobile}>
+            <Search scroll={scroll} placeholder="Search title blog here..." />
+          </div>
+        )}
+
         {/* Navbar Mobile */}
         <ImageNext
           src={icons.menuMobile.src}
           alt={icons.menuMobile.alt}
-          style={{ color: "white", cursor: "pointer" }}
           width={42}
           height={42}
           onClick={() => setNavbarMobile((prev) => !prev)}
@@ -101,6 +107,27 @@ function Navbar() {
 
         {navbarMobile && (
           <div className={styles.navbar__menu_mobile}>
+            {/* Icons exit */}
+            <div className={styles.icon__exit}>
+              <ImageNext
+                src={icons.close.src}
+                alt={icons.close.alt}
+                width={26}
+                height={26}
+                onClick={() => setNavbarMobile((prev) => !prev)}
+              />
+            </div>
+
+            {/* Search blog only with navbar mobile */}
+            {pathName === paths.BLOG_PAGE.url && (
+              <div className={styles.search___mobile__in_menu}>
+                <Search
+                  scroll={scroll}
+                  placeholder="Search title blog here..."
+                />
+              </div>
+            )}
+
             {routes.map((item) => (
               <li key={item.name}>
                 <MenuLink item={item} pathName={pathName} />

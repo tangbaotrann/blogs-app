@@ -4,21 +4,23 @@ import styles from "./Search.module.css";
 import Input from "../Input/Input";
 import { icons } from "@/public/assets";
 
-function Search({ placeholder }) {
+function Search({ placeholder, scroll }) {
   return (
     <div className={styles.search}>
       <ImageNext
         src={icons.search.src}
         alt={icons.search.alt}
-        width={24}
-        height={24}
+        width={22}
+        height={22}
         className={styles.search__icon}
       />
       <Input
         type="text"
         name="search"
         placeholder={placeholder}
-        className={styles.search__inp}
+        className={`${
+          scroll >= 20 ? styles.search__inp_bg : styles.search__inp
+        }`}
         primary
         large
         borderRadius

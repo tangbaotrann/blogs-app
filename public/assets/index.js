@@ -46,6 +46,10 @@ export const icons = {
     src: "/assets/icons/back.png",
     alt: "back",
   },
+  close: {
+    src: "/assets/icons/cross.png",
+    alt: "close",
+  },
 };
 
 export const imagesGif = {

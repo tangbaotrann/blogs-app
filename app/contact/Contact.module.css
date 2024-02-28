@@ -48,6 +48,12 @@
 }
 
 @media screen and (max-width: 640px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .image {
     position: relative;
     width: 200px;
