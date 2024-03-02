@@ -7,6 +7,11 @@ import Input from "@/components/Input/Input";
 import Textarea from "@/components/Textarea/Textarea";
 import Button from "@/components/Button/Button";
 
+export const metadata = {
+  title: "Contact",
+  description: "Blogs app contact with next app",
+};
+
 function ContactPage() {
   return (
     <div className={styles.container}>
@@ -50,7 +55,6 @@ function ContactPage() {
             large
             borderRadius
           ></Textarea>
-
           <Button primary large borderRadius className={styles.btn}>
             Send
           </Button>

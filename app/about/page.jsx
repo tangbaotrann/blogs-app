@@ -3,6 +3,11 @@ import ImageNext from "next/image";
 import styles from "./about.module.css";
 import images from "@/public/assets";
 
+export const metadata = {
+  title: "About",
+  description: "Blogs app about with next app",
+};
+
 function AboutPage() {
   return (
     <div className={styles.container}>
