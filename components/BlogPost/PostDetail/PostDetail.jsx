@@ -13,8 +13,6 @@ async function PostDetail({ params }) {
   const post = await getPost(id);
   const user = await getUser(post.userId);
 
-  console.log(user);
-
   return (
     <>
       <div className={styles.back__blog}>

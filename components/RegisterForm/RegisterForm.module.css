@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 40%;
+}
+
+.form input {
+  color: var(--text-primary);
+  background-color: var(--bg);
+}
+
+.message {
+  text-align: center;
+  color: red;
+}

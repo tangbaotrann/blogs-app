@@ -9,13 +9,12 @@ import styles from "./Navbar.module.css";
 import Image from "../Image/Image";
 import images, { icons } from "@/public/assets";
 import MenuLink from "./MenuLink/MenuLink";
-import Button from "../Button/Button";
 import routes from "@/routes";
 import paths from "@/routes/paths";
-import Logout from "./Logout/Logout";
 import Search from "../Search/Search";
+import Logout from "./Logout/Logout";
 
-function Navbar() {
+function Navbar({ session }) {
   const pathName = usePathname();
 
   const [navbarMobile, setNavbarMobile] = useState(false);
@@ -32,10 +31,6 @@ function Navbar() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scroll]);
-
-  // Testing... login page
-  const session = true;
-  const isAdmin = true;
 
   return (
     <div
@@ -63,10 +58,10 @@ function Navbar() {
           </li>
         ))}
 
-        {session ? (
+        {session?.user ? (
           <>
             <div className={styles.admin}>
-              {isAdmin && (
+              {session?.user?.isAdmin && (
                 <MenuLink
                   item={{
                     path: paths.ADMIN_PAGE.url,
@@ -76,9 +71,10 @@ function Navbar() {
                 />
               )}
             </div>
-            <Button danger large borderRadius className={styles.btn__logout}>
+
+            <div className={styles.btn__logout}>
               <Logout />
-            </Button>
+            </div>
           </>
         ) : (
           <MenuLink
@@ -134,9 +130,9 @@ function Navbar() {
               </li>
             ))}
 
-            {session ? (
+            {session?.user ? (
               <>
-                {isAdmin && (
+                {session?.user?.isAdmin && (
                   <MenuLink
                     item={{
                       path: paths.ADMIN_PAGE.url,
@@ -145,14 +141,9 @@ function Navbar() {
                     pathName={pathName}
                   />
                 )}
-                <Button
-                  danger
-                  large
-                  borderRadius
-                  className={styles.btn__logout}
-                >
+                <div className={styles.btn__logout}>
                   <Logout />
-                </Button>
+                </div>
               </>
             ) : (
               <MenuLink
